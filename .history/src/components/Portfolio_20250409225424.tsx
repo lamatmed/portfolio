@@ -328,7 +328,7 @@ const Portfolio = () => {
                   {[{
                     icon: GraduationCap,
                     color: "violet",
-                    title: "Baccalauréat Scientifique C",
+                    title: "Baccalauréat Scientifique",
                     org: "Lycée Arabe, Mauritanie",
                     period: "2005 – 2008",
                     description:
@@ -347,7 +347,7 @@ const Portfolio = () => {
                     icon: GraduationCap,
                     color: "violet",
                     title: "Master en Systèmes Intelligents Mobiles",
-                    org: "Université de Batna,Algérie",
+                    org: "Université XYZ",
                     period: "2012 – 2014",
                     description:
                       "Approfondissement en IA mobile, systèmes embarqués intelligents, cloud computing et applications mobiles avancées."

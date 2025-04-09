@@ -327,31 +327,23 @@ const Portfolio = () => {
                 <div className="space-y-8">
                   {[{
                     icon: GraduationCap,
-                    color: "violet",
-                    title: "Baccalauréat Scientifique C",
-                    org: "Lycée Arabe, Mauritanie",
-                    period: "2005 – 2008",
+                    color: "rose",
+                    title: "Baccalauréat Scientifique",
+                    org: "Lycée National",
+                    period: "2008 – 2011",
                     description:
                       "Formation scientifique de base avec spécialisation en mathématiques et physique.",
                   },
                   {
                     icon: GraduationCap,
-                     color: "violet",
+                    color: "indigo",
                     title: "Licence en Informatique",
-                    org: "Université de Batna,Algérie",
-                    period: "2009 – 2012",
+                    org: "Université de Nouakchott",
+                    period: "2011 – 2014",
                     description:
                       "Apprentissage des bases du développement logiciel, bases de données et systèmes.",
                   },
-                  {
-                    icon: GraduationCap,
-                    color: "violet",
-                    title: "Master en Systèmes Intelligents Mobiles",
-                    org: "Université de Batna,Algérie",
-                    period: "2012 – 2014",
-                    description:
-                      "Approfondissement en IA mobile, systèmes embarqués intelligents, cloud computing et applications mobiles avancées."
-                  },
+                  
                   {
                     icon: Briefcase,
                     color: "indigo",

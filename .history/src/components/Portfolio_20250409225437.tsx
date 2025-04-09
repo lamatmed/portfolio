@@ -328,7 +328,7 @@ const Portfolio = () => {
                   {[{
                     icon: GraduationCap,
                     color: "violet",
-                    title: "Baccalauréat Scientifique C",
+                    title: "Baccalauréat Scientifique",
                     org: "Lycée Arabe, Mauritanie",
                     period: "2005 – 2008",
                     description:

@@ -105,7 +105,7 @@ const Portfolio = () => {
       title: "📦 Gestion de stock local",
       description:
         "Authentification, gestion des rôles, historique des mouvements",
-      tech: ["TypeScript", "Next.js", "Neon", "Prisma"],
+      tech: ["TypeScript", "Next.js", "Neon","Prisma"],
       stars: 256,
     },
     {
@@ -130,9 +130,9 @@ const Portfolio = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-rose-400">
             Lamat Abdellahi
           </h1>
-          <div className="flex items-center gap-4 flex-wrap">
+          <div  className="flex items-center gap-4 flex-wrap">
             <nav className="flex gap-2 overflow-x-auto scrollbar-none">
-              {["about", "projects", "experience"].map((section) => (
+              {["about", "projects", "experience","Etudes"].map((section) => (
                 <button
                   key={section}
                   onClick={() => setActiveSection(section)}
@@ -168,7 +168,7 @@ const Portfolio = () => {
         </header>
 
         <main className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <div className="md:col-span-4">
+          <div  className="md:col-span-4">
             <div
               className={`backdrop-blur-lg rounded-2xl p-8 shadow-lg
               ${theme === "dark" ? "bg-gray-800/70" : "bg-white/70"}`}
@@ -176,13 +176,13 @@ const Portfolio = () => {
               <div className="relative mb-8">
                 {/* Profile Image */}
                 <Image
-
+                
                   width={200}
                   height={200}
-
+                 
                   src="/lmt.jpg"
                   alt="Mon profile"
-
+                
                 />
                 <div
                   className={`absolute -bottom-4 -right-4 p-3 rounded-xl shadow-lg
@@ -198,18 +198,18 @@ const Portfolio = () => {
                 className={`mb-6 ${theme === "dark" ? "text-gray-300" : "text-gray-600"
                   }`}
               >
-                Développeur fullstack passionné, spécialisé en Next.js pour le web
-                et React Native pour le mobile.
+               Développeur fullstack passionné, spécialisé en Next.js pour le web 
+               et React Native pour le mobile. 
               </p>
 
-              <div className="flex gap-4 flex-wrap">
+              <div  className="flex gap-4 flex-wrap">
                 {socialLinks.map((link: SocialLink, index: number) => (
                   <a
                     key={index}
                     href={link.href}
                     className={`p-2 rounded-lg transition-all duration-300 ${theme === "dark"
-                      ? "bg-gray-700 hover:bg-gray-600 hover:scale-110"
-                      : "bg-gray-100 hover:bg-gray-200 hover:scale-110"
+                        ? "bg-gray-700 hover:bg-gray-600 hover:scale-110"
+                        : "bg-gray-100 hover:bg-gray-200 hover:scale-110"
                       }`}
                   >
                     <link.Icon
@@ -232,11 +232,11 @@ const Portfolio = () => {
                   className={`mb-6 ${theme === "dark" ? "text-gray-300" : "text-gray-600"
                     }`}
                 >
-                  J&apos;aime créer des interfaces modernes,
-                  performantes et intuitives, aussi bien côté client que serveur.
-                  Je suis autonome, rigoureux, et j&apos;adore relever de nouveaux défis techniques.
+                 J&apos;aime créer des interfaces modernes, 
+               performantes et intuitives, aussi bien côté client que serveur. 
+               Je suis autonome, rigoureux, et j&apos;adore relever de nouveaux défis techniques.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div  className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {["Compétences techniques", "Compétences non techniques"].map(
                     (category, index) => (
                       <div
@@ -326,59 +326,50 @@ const Portfolio = () => {
               >
                 <div className="space-y-8">
                   {[{
-                    icon: GraduationCap,
-                    color: "violet",
-                    title: "Baccalauréat Scientifique C",
-                    org: "Lycée Arabe, Mauritanie",
-                    period: "2005 – 2008",
-                    description:
-                      "Formation scientifique de base avec spécialisation en mathématiques et physique.",
-                  },
-                  {
-                    icon: GraduationCap,
-                     color: "violet",
-                    title: "Licence en Informatique",
-                    org: "Université de Batna,Algérie",
-                    period: "2009 – 2012",
-                    description:
-                      "Apprentissage des bases du développement logiciel, bases de données et systèmes.",
-                  },
-                  {
-                    icon: GraduationCap,
-                    color: "violet",
-                    title: "Master en Systèmes Intelligents Mobiles",
-                    org: "Université de Batna,Algérie",
-                    period: "2012 – 2014",
-                    description:
-                      "Approfondissement en IA mobile, systèmes embarqués intelligents, cloud computing et applications mobiles avancées."
-                  },
-                  {
-                    icon: Briefcase,
-                    color: "indigo",
-                    title: "Technicien Informatique / Web",
-                    org: "CDI",
-                    period: "Depuis 2014",
-                    description:
-                      "Création de petits sites vitrines en HTML/CSS/JS,Introduction au développement backend avec PHP & MySQL",
-                  },
-                  {
-                    icon: Briefcase,
-                    color: "rose",
-                    title: "Développeur Frontend",
-                    org: "Startup Locale",
-                    period: " 2018 – 2021",
-                    description:
-                      "Création d'interfaces utilisateurs avec React & Tailwind CSS",
-                  },
-                  {
-                    icon: Award,
-                    color: "amber",
-                    title: "Développeur Web Fullstack — Freelance / Indépendant",
-                    org: "Local",
-                    period: "Depuis 2021 — Aujourd'hui",
-                    description:
-                      "Création d'applications web & mobiles avec Next.js et React Native",
-                  },
+          icon: GraduationCap,
+          color: "rose",
+          title: "Baccalauréat Scientifique",
+          org: "Lycée National",
+          period: "2008 – 2011",
+          description:
+            "Formation scientifique de base avec spécialisation en mathématiques et physique.",
+        },
+        {
+          icon: GraduationCap,
+          color: "indigo",
+          title: "Licence en Informatique",
+          org: "Université de Nouakchott",
+          period: "2011 – 2014",
+          description:
+            "Apprentissage des bases du développement logiciel, bases de données et systèmes.",
+        },
+                    {
+                      icon: Briefcase,
+                      color: "indigo",
+                      title: "Technicien Informatique / Web",
+                      org: "CDI",
+                      period: "Depuis 2014",
+                      description:
+                        "Création de petits sites vitrines en HTML/CSS/JS,Introduction au développement backend avec PHP & MySQL",
+                    },
+                    {
+                      icon: GraduationCap,
+                      color: "rose",
+                      title: "Développeur Frontend",
+                      org: "Startup Locale",
+                      period: " 2018 – 2021",
+                      description:
+                        "Création d'interfaces utilisateurs avec React & Tailwind CSS",
+                    },
+                    {
+                      icon: Award,
+                      color: "amber",
+                      title: "Développeur Web Fullstack — Freelance / Indépendant",
+                      org: "Local",
+                      period: "Depuis 2021 — Aujourd'hui",
+                      description:
+                        "Création d'applications web & mobiles avec Next.js et React Native",
+                    },
                   ].map((item, index) => (
                     <div key={index} className="flex flex-col sm:flex-row gap-4">
                       <div
