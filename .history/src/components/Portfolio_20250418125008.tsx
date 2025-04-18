@@ -144,13 +144,13 @@ const Portfolio = () => {
             <nav className="flex gap-1 p-1 rounded-xl backdrop-blur-sm" style={{
               background: theme === "dark" ? 'rgba(31, 41, 55, 0.5)' : 'rgba(255, 255, 255, 0.5)'
             }}>
-
-              {["about", "projects", "experience", "CV"].map((section) => (
+            
+              {["about", "projects", "experience", "cv"].map((section) => (
                 <button
                   key={section}
                   onClick={() => setActiveSection(section)}
                   className={`px-4 py-2 rounded-lg transition-all capitalize text-sm font-medium
-                      ${activeSection === section
+        ${activeSection === section
                       ? theme === "dark"
                         ? "bg-gray-700 text-white shadow"
                         : "bg-white text-gray-900 shadow"
@@ -159,7 +159,7 @@ const Portfolio = () => {
                         : "text-gray-600 hover:bg-white/70 hover:text-gray-900"
                     }`}
                 >
-                  {section}
+                  {section === "cv" ? "Télécharger CV" : section}
                 </button>
               ))}
             </nav>
@@ -239,7 +239,7 @@ const Portfolio = () => {
           </div>
 
           <div className="lg:col-span-8 space-y-8">
-
+            
             {activeSection === "about" && (
               <div
                 className={`rounded-3xl p-8 shadow-xl border border-opacity-10

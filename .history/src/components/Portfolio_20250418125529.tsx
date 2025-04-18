@@ -145,7 +145,7 @@ const Portfolio = () => {
               background: theme === "dark" ? 'rgba(31, 41, 55, 0.5)' : 'rgba(255, 255, 255, 0.5)'
             }}>
 
-              {["about", "projects", "experience", "CV"].map((section) => (
+              {["about", "projects", "experience", "c"].map((section) => (
                 <button
                   key={section}
                   onClick={() => setActiveSection(section)}

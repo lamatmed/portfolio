@@ -145,12 +145,12 @@ const Portfolio = () => {
               background: theme === "dark" ? 'rgba(31, 41, 55, 0.5)' : 'rgba(255, 255, 255, 0.5)'
             }}>
 
-              {["about", "projects", "experience", "CV"].map((section) => (
+              {["about", "projects", "experience", "cv"].map((section) => (
                 <button
                   key={section}
                   onClick={() => setActiveSection(section)}
                   className={`px-4 py-2 rounded-lg transition-all capitalize text-sm font-medium
-                      ${activeSection === section
+        ${activeSection === section
                       ? theme === "dark"
                         ? "bg-gray-700 text-white shadow"
                         : "bg-white text-gray-900 shadow"
@@ -159,7 +159,7 @@ const Portfolio = () => {
                         : "text-gray-600 hover:bg-white/70 hover:text-gray-900"
                     }`}
                 >
-                  {section}
+                  {section === "cv" ? "Télécharger CV" : section}
                 </button>
               ))}
             </nav>

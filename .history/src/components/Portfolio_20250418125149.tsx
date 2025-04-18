@@ -159,7 +159,7 @@ const Portfolio = () => {
                         : "text-gray-600 hover:bg-white/70 hover:text-gray-900"
                     }`}
                 >
-                  {section}
+                
                 </button>
               ))}
             </nav>

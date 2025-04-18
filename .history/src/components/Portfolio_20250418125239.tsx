@@ -145,7 +145,7 @@ const Portfolio = () => {
               background: theme === "dark" ? 'rgba(31, 41, 55, 0.5)' : 'rgba(255, 255, 255, 0.5)'
             }}>
 
-              {["about", "projects", "experience", "CV"].map((section) => (
+              {["about", "projects", "experience", "C"].map((section) => (
                 <button
                   key={section}
                   onClick={() => setActiveSection(section)}
@@ -159,7 +159,7 @@ const Portfolio = () => {
                         : "text-gray-600 hover:bg-white/70 hover:text-gray-900"
                     }`}
                 >
-                  {section}
+                  {section === "cv" ? "Télécharger CV" : section}
                 </button>
               ))}
             </nav>
