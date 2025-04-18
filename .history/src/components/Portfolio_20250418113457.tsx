@@ -463,6 +463,8 @@ const Portfolio = () => {
                 </div>
               </div>
             )}
+
+
             {activeSection === "cv" && (
               <div
                 className={`rounded-3xl p-8 shadow-xl border border-opacity-10

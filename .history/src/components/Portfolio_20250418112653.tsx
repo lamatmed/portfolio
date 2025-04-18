@@ -10,12 +10,12 @@ import {
   Award,
   Sun,
   Moon,
-
+  FileText,
   Phone,
   MapPin,
 } from "lucide-react";
 import Image from "next/image";
-
+import { PDFDownloadButton } from './CVPDF';
 type ThemeContextType = {
   theme: string;
   setTheme: (theme: string) => void;
@@ -88,6 +88,11 @@ const socialLinks: SocialLink[] = [
     href: "https://www.google.com/maps/place/Ton+Adresse",
     color: "text-[#FBBC05] hover:text-[#FBBC05]/80",
   },
+  {
+    Icon: FileText,
+    href: "/cv-lamat-abdellahi.pdf", // Assurez-vous d'avoir ce fichier dans votre dossier public
+    color: "text-[#6B7280] hover:text-[#6B7280]/80",
+  },
 ];
 
 const Portfolio = () => {
@@ -144,13 +149,12 @@ const Portfolio = () => {
             <nav className="flex gap-1 p-1 rounded-xl backdrop-blur-sm" style={{
               background: theme === "dark" ? 'rgba(31, 41, 55, 0.5)' : 'rgba(255, 255, 255, 0.5)'
             }}>
-            
-              {["about", "projects", "experience", "cv"].map((section) => (
+              {["about", "projects", "experience"].map((section) => (
                 <button
                   key={section}
                   onClick={() => setActiveSection(section)}
                   className={`px-4 py-2 rounded-lg transition-all capitalize text-sm font-medium
-      ${activeSection === section
+                    ${activeSection === section
                       ? theme === "dark"
                         ? "bg-gray-700 text-white shadow"
                         : "bg-white text-gray-900 shadow"
@@ -159,7 +163,7 @@ const Portfolio = () => {
                         : "text-gray-600 hover:bg-white/70 hover:text-gray-900"
                     }`}
                 >
-                  {section === "cv" ? "Télécharger CV" : section}
+                  {section}
                 </button>
               ))}
             </nav>
@@ -217,29 +221,28 @@ const Portfolio = () => {
               </p>
 
               <div className="flex gap-3 flex-wrap">
-                {socialLinks.map((link: SocialLink, index: number) => (
-                  <a
-                    key={index}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-3 rounded-xl transition-all duration-300 hover:scale-110 shadow
-                      ${theme === "dark"
-                        ? "bg-gray-700 hover:bg-gray-600"
-                        : "bg-gray-100 hover:bg-gray-200"
-                      }`}
-                  >
-                    <link.Icon
-                      className={`w-5 h-5 transition-colors ${link.color}`}
-                    />
-                  </a>
-                ))}
+                {socialLinks.map((link, index) => (
+  link.component ? (
+    <div key={index}>{link.component}</div>
+  ) : (
+    <a
+      key={index}
+      href={link.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`p-3 rounded-xl transition-all duration-300 hover:scale-110 shadow ${
+        theme === "dark" ? "bg-gray-700 hover:bg-gray-600" : "bg-gray-100 hover:bg-gray-200"
+      }`}
+    >
+      <link.Icon className={`w-5 h-5 transition-colors ${link.color}`} />
+    </a>
+  )
+))}
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-8 space-y-8">
-            
             {activeSection === "about" && (
               <div
                 className={`rounded-3xl p-8 shadow-xl border border-opacity-10
@@ -460,67 +463,6 @@ const Portfolio = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-              </div>
-            )}
-            {activeSection === "cv" && (
-              <div
-                className={`rounded-3xl p-8 shadow-xl border border-opacity-10
-    ${theme === "dark"
-                    ? "bg-gray-800/70 border-gray-600"
-                    : "bg-white/80 border-gray-300"
-                  }`}
-              >
-                <h3 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-rose-400">
-                  Mon Curriculum Vitae
-                </h3>
-
-                <div className="flex flex-col items-center justify-center py-12">
-                  <div className={`mb-8 p-6 rounded-2xl ${theme === "dark" ? "bg-gray-700/50" : "bg-gray-50"}`}>
-                    <p className={`text-lg text-center ${theme === "dark" ? "text-gray-300" : "text-gray-600"} mb-6`}>
-                      Téléchargez mon CV complet au format PDF
-                    </p>
-
-                    <div className="flex justify-center">
-                      <a
-                        href="/cv.pdf"
-                        download="Lamat_Abdellahi_CV.pdf"
-                        className={`px-6 py-3 rounded-xl font-medium flex items-center gap-2 transition-all hover:scale-105
-              ${theme === "dark"
-                            ? "bg-indigo-600 hover:bg-indigo-700 text-white"
-                            : "bg-indigo-500 hover:bg-indigo-600 text-white"
-                          }`}
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                        </svg>
-                        Télécharger le CV
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className={`p-6 rounded-2xl ${theme === "dark" ? "bg-gray-700/50" : "bg-gray-50"}`}>
-                    <h4 className="text-xl font-bold mb-4 text-center">Informations du CV</h4>
-                    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
-                      <div>
-                        <h5 className="font-bold mb-2">Compétences clés</h5>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>Développement Fullstack (React, Next.js, Node.js)</li>
-                          <li>Applications mobiles avec React Native</li>
-                          <li>Bases de données (SQL, NoSQL)</li>
-                          <li>Architecture cloud et serverless</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h5 className="font-bold mb-2">Certifications</h5>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>Certification AWS Cloud Practitioner</li>
-                          <li>React Advanced Concepts</li>
-                          <li>TypeScript Mastery</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             )}

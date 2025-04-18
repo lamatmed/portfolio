@@ -463,6 +463,9 @@ const Portfolio = () => {
                 </div>
               </div>
             )}
+
+
+            // Ajoutez ce code dans la partie où vous avez les autres sections (about, projects, experience)
             {activeSection === "cv" && (
               <div
                 className={`rounded-3xl p-8 shadow-xl border border-opacity-10

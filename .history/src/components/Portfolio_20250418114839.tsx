@@ -93,6 +93,7 @@ const socialLinks: SocialLink[] = [
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("about");
   const { theme, setTheme } = useContext(ThemeContext);
+  
 
   const projects = [
     {

@@ -93,6 +93,28 @@ const socialLinks: SocialLink[] = [
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("about");
   const { theme, setTheme } = useContext(ThemeContext);
+   const cvRef = useRef<HTMLDivElement>(null);
+
+  const handleGeneratePdf = useReactToPrint({
+    content: () => cvRef.current,
+    documentTitle: "Lamat_Abdellahi_CV",
+    pageStyle: `
+      @page { 
+        size: A4;
+        margin: 1cm;
+      }
+      @media print {
+        body { 
+          -webkit-print-color-adjust: exact; 
+          color-adjust: exact;
+        }
+        .cv-content {
+          padding: 20px;
+        }
+      }
+    `,
+    onAfterPrint: () => alert("CV téléchargé avec succès!")
+  });
 
   const projects = [
     {

@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext, useEffect } from "react";
+import React, { useState, createContext, useContext, useEffect, useRef } from "react";
 import {
   Github,
   Linkedin,
@@ -15,6 +15,9 @@ import {
   MapPin,
 } from "lucide-react";
 import Image from "next/image";
+import { useReactToPrint } from 'react-to-print';
+
+
 
 type ThemeContextType = {
   theme: string;
@@ -93,6 +96,20 @@ const socialLinks: SocialLink[] = [
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("about");
   const { theme, setTheme } = useContext(ThemeContext);
+  const cvRef = useRef<HTMLDivElement>(null);
+
+  const handlePrint = useReactToPrint({
+    content: () => cvRef.current,
+    documentTitle: "Lamat_Abdellahi_CV",
+    pageStyle: `
+    @page { size: A4; margin: 1cm; }
+    @media print {
+      body { -webkit-print-color-adjust: exact; }
+      .no-print { display: none; }
+    }
+  `,
+    onAfterPrint: () => console.log("CV imprimé avec succès")
+  });
 
   const projects = [
     {
@@ -464,63 +481,101 @@ const Portfolio = () => {
               </div>
             )}
             {activeSection === "cv" && (
-              <div
-                className={`rounded-3xl p-8 shadow-xl border border-opacity-10
+              <div className={`rounded-3xl p-8 shadow-xl border border-opacity-10
     ${theme === "dark"
-                    ? "bg-gray-800/70 border-gray-600"
-                    : "bg-white/80 border-gray-300"
-                  }`}
+                  ? "bg-gray-800/70 border-gray-600"
+                  : "bg-white/80 border-gray-300"}`}
               >
                 <h3 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-rose-400">
                   Mon Curriculum Vitae
                 </h3>
 
-                <div className="flex flex-col items-center justify-center py-12">
+                {/* Référence pour le contenu à convertir en PDF */}
+                <div ref={cvRef} className="cv-content">
                   <div className={`mb-8 p-6 rounded-2xl ${theme === "dark" ? "bg-gray-700/50" : "bg-gray-50"}`}>
+                    <h2 className="text-2xl font-bold text-center mb-4">Lamat Abdellahi</h2>
                     <p className={`text-lg text-center ${theme === "dark" ? "text-gray-300" : "text-gray-600"} mb-6`}>
-                      Téléchargez mon CV complet au format PDF
+                      Senior Software Engineer
                     </p>
 
-                    <div className="flex justify-center">
-                      <a
-                        href="/cv.pdf"
-                        download="Lamat_Abdellahi_CV.pdf"
-                        className={`px-6 py-3 rounded-xl font-medium flex items-center gap-2 transition-all hover:scale-105
-              ${theme === "dark"
-                            ? "bg-indigo-600 hover:bg-indigo-700 text-white"
-                            : "bg-indigo-500 hover:bg-indigo-600 text-white"
-                          }`}
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                        </svg>
-                        Télécharger le CV
-                      </a>
-                    </div>
-                  </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                      <div>
+                        <h3 className="text-xl font-bold border-b pb-2 mb-4">Expérience Professionnelle</h3>
+                        <div className="space-y-4">
+                          {[
+                            {
+                              title: "Développeur Web Fullstack — Freelance",
+                              period: "Depuis 2021",
+                              description: "Création d'applications web & mobiles avec Next.js et React Native"
+                            },
+                            {
+                              title: "Développeur Frontend",
+                              period: "2018 – 2021",
+                              description: "Création d'interfaces utilisateurs avec React & Tailwind CSS"
+                            }
+                          ].map((exp, index) => (
+                            <div key={index} className="mb-4">
+                              <h4 className="font-bold">{exp.title}</h4>
+                              <p className={`text-sm ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>{exp.period}</p>
+                              <p className="mt-1">{exp.description}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
 
-                  <div className={`p-6 rounded-2xl ${theme === "dark" ? "bg-gray-700/50" : "bg-gray-50"}`}>
-                    <h4 className="text-xl font-bold mb-4 text-center">Informations du CV</h4>
-                    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
                       <div>
-                        <h5 className="font-bold mb-2">Compétences clés</h5>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>Développement Fullstack (React, Next.js, Node.js)</li>
-                          <li>Applications mobiles avec React Native</li>
-                          <li>Bases de données (SQL, NoSQL)</li>
-                          <li>Architecture cloud et serverless</li>
-                        </ul>
+                        <h3 className="text-xl font-bold border-b pb-2 mb-4">Formation</h3>
+                        <div className="space-y-4">
+                          {[
+                            {
+                              title: "Master en Systèmes Intelligents Mobiles",
+                              period: "2012 – 2014",
+                              description: "Université de Batna, Algérie"
+                            },
+                            {
+                              title: "Licence en Informatique",
+                              period: "2009 – 2012",
+                              description: "Université de Batna, Algérie"
+                            }
+                          ].map((edu, index) => (
+                            <div key={index} className="mb-4">
+                              <h4 className="font-bold">{edu.title}</h4>
+                              <p className={`text-sm ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>{edu.period}</p>
+                              <p className="mt-1">{edu.description}</p>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                      <div>
-                        <h5 className="font-bold mb-2">Certifications</h5>
-                        <ul className="list-disc pl-5 space-y-1">
-                          <li>Certification AWS Cloud Practitioner</li>
-                          <li>React Advanced Concepts</li>
-                          <li>TypeScript Mastery</li>
-                        </ul>
+                    </div>
+
+                    <div className="mt-8">
+                      <h3 className="text-xl font-bold border-b pb-2 mb-4">Compétences Techniques</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {["React", "Next.js", "TypeScript", "Node.js", "React Native", "Tailwind CSS", "Prisma", "MongoDB"].map((skill) => (
+                          <span key={skill} className={`px-3 py-1 rounded-full text-sm 
+                ${theme === "dark" ? "bg-gray-600" : "bg-gray-200"}`}>
+                            {skill}
+                          </span>
+                        ))}
                       </div>
                     </div>
                   </div>
+                </div>
+
+                {/* Bouton de génération du PDF */}
+                <div className="flex justify-center mt-8">
+                  <button
+                    onClick={handleGeneratePdf}
+                    className={`px-6 py-3 rounded-xl font-medium flex items-center gap-2 transition-all hover:scale-105
+          ${theme === "dark"
+                        ? "bg-indigo-600 hover:bg-indigo-700 text-white"
+                        : "bg-indigo-500 hover:bg-indigo-600 text-white"}`}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Générer et Télécharger le CV
+                  </button>
                 </div>
               </div>
             )}
