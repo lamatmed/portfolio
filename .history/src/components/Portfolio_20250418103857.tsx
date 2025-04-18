@@ -138,7 +138,7 @@ const Portfolio = () => {
               Senior Software Engineer
             </p>
           </div>
-
+          
           <div className="flex items-center gap-4 flex-wrap">
             <nav className="flex gap-1 p-1 rounded-xl backdrop-blur-sm" style={{
               background: theme === "dark" ? 'rgba(31, 41, 55, 0.5)' : 'rgba(255, 255, 255, 0.5)'
@@ -203,7 +203,7 @@ const Portfolio = () => {
                   <Code className="w-6 h-6 text-indigo-500" />
                 </div>
               </div>
-
+              
               <h2 className="text-2xl font-bold mb-3">
                 Développeur Fullstack
               </h2>
@@ -211,7 +211,7 @@ const Portfolio = () => {
                 className={`mb-6 text-lg leading-relaxed
                 ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}
               >
-                Passionné par la création d&lsquo;applications web et mobiles performantes avec des technologies modernes.
+                Passionné par la création d'applications web et mobiles performantes avec des technologies modernes.
               </p>
 
               <div className="flex gap-3 flex-wrap">
@@ -253,10 +253,10 @@ const Portfolio = () => {
                   ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}
                 >
                   Je crée des interfaces modernes et performantes avec une attention particulière
-                  à l&lsquo;expérience utilisateur. Mon approche combine esthétique, fonctionnalité
+                  à l'expérience utilisateur. Mon approche combine esthétique, fonctionnalité
                   et performance pour des produits digitaux exceptionnels.
                 </p>
-
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {["Compétences techniques", "Soft skills"].map(
                     (category, index) => (
@@ -276,22 +276,22 @@ const Portfolio = () => {
                         <div className="flex flex-wrap gap-3">
                           {(category === "Compétences techniques"
                             ? [
-                              "⚛️ ▲ React NextJS",
-                              "🟦 TypeScript",
-                              "🎯 Appwrite",
-                              "🔥 Firebase",
-                              "🔷 Prisma",
-                              "🍃 MongoDB",
-                              "🟩 Node.js",
-                              "🎨 Tailwind CSS",
+                              "React/NextJS",
+                              "TypeScript",
+                              "Appwrite",
+                              "Firebase",
+                              "Prisma",
+                              "MongoDB",
+                              "Node.js",
+                              "Tailwind CSS",
                             ]
                             : [
-                              "🛠️ Résolution de problèmes",
-                              "🧠 Communication",
-                              "🤝 Esprit d'équipe",
-                              "📋 Autonomie & rigueur",
-                              "🔄 Adaptabilité",
-                              "🕐 Gestion du temps",
+                              "Résolution de problèmes",
+                              "Communication claire",
+                              "Collaboration",
+                              "Autonomie",
+                              "Adaptabilité",
+                              "Gestion du temps",
                             ]
                           ).map((skill) => (
                             <span
@@ -372,7 +372,7 @@ const Portfolio = () => {
                 <h3 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-rose-400">
                   Parcours Professionnel
                 </h3>
-
+                
                 <div className="space-y-8">
                   {[
                     {
@@ -434,9 +434,9 @@ const Portfolio = () => {
                       <div
                         className={`flex-shrink-0 p-3 rounded-xl h-min transition-all group-hover:scale-110
                         ${theme === "dark"
-                            ? `bg-${item.color}-900/30 text-${item.color}-400`
-                            : `bg-${item.color}-100 text-${item.color}-600`
-                          }`}
+                          ? `bg-${item.color}-900/30 text-${item.color}-400`
+                          : `bg-${item.color}-100 text-${item.color}-600`
+                        }`}
                       >
                         <item.icon className="w-6 h-6" />
                       </div>

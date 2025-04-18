@@ -277,21 +277,21 @@ const Portfolio = () => {
                           {(category === "Compétences techniques"
                             ? [
                               "⚛️ ▲ React NextJS",
-                              "🟦 TypeScript",
-                              "🎯 Appwrite",
-                              "🔥 Firebase",
-                              "🔷 Prisma",
-                              "🍃 MongoDB",
-                              "🟩 Node.js",
-                              "🎨 Tailwind CSS",
+                              "🟦TypeScript",
+                              "🎯Appwrite",
+                              "🔥Firebase",
+                              "🔷Prisma",
+                              "🍃MongoDB",
+                              "Node.js",
+                              "Tailwind CSS",
                             ]
                             : [
                               "🛠️ Résolution de problèmes",
                               "🧠 Communication",
                               "🤝 Esprit d'équipe",
-                              "📋 Autonomie & rigueur",
-                              "🔄 Adaptabilité",
-                              "🕐 Gestion du temps",
+                              "🕐 Autonomie & rigueur",
+                              "Adaptabilité",
+                              "Gestion du temps",
                             ]
                           ).map((skill) => (
                             <span

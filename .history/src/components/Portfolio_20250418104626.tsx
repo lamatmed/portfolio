@@ -289,8 +289,8 @@ const Portfolio = () => {
                               "🛠️ Résolution de problèmes",
                               "🧠 Communication",
                               "🤝 Esprit d'équipe",
-                              "📋 Autonomie & rigueur",
-                              "🔄 Adaptabilité",
+                              "🕐 Autonomie & rigueur",
+                              "🧠 Adaptabilité",
                               "🕐 Gestion du temps",
                             ]
                           ).map((skill) => (

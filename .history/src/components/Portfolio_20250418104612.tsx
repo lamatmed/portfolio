@@ -284,13 +284,12 @@ const Portfolio = () => {
                               "🍃 MongoDB",
                               "🟩 Node.js",
                               "🎨 Tailwind CSS",
-                            ]
                             : [
                               "🛠️ Résolution de problèmes",
                               "🧠 Communication",
                               "🤝 Esprit d'équipe",
-                              "📋 Autonomie & rigueur",
-                              "🔄 Adaptabilité",
+                              "🕐 Autonomie & rigueur",
+                              "🧠 Adaptabilité",
                               "🕐 Gestion du temps",
                             ]
                           ).map((skill) => (

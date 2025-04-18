@@ -211,7 +211,7 @@ const Portfolio = () => {
                 className={`mb-6 text-lg leading-relaxed
                 ${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}
               >
-                Passionné par la création d&lsquo;applications web et mobiles performantes avec des technologies modernes.
+                Passionné par la création d'applications web et mobiles performantes avec des technologies modernes.
               </p>
 
               <div className="flex gap-3 flex-wrap">
@@ -276,22 +276,22 @@ const Portfolio = () => {
                         <div className="flex flex-wrap gap-3">
                           {(category === "Compétences techniques"
                             ? [
-                              "⚛️ ▲ React NextJS",
-                              "🟦 TypeScript",
-                              "🎯 Appwrite",
-                              "🔥 Firebase",
-                              "🔷 Prisma",
-                              "🍃 MongoDB",
-                              "🟩 Node.js",
-                              "🎨 Tailwind CSS",
+                              "React/NextJS",
+                              "TypeScript",
+                              "Appwrite",
+                              "Firebase",
+                              "Prisma",
+                              "MongoDB",
+                              "Node.js",
+                              "Tailwind CSS",
                             ]
                             : [
-                              "🛠️ Résolution de problèmes",
-                              "🧠 Communication",
-                              "🤝 Esprit d'équipe",
-                              "📋 Autonomie & rigueur",
-                              "🔄 Adaptabilité",
-                              "🕐 Gestion du temps",
+                              "Résolution de problèmes",
+                              "Communication claire",
+                              "Collaboration",
+                              "Autonomie",
+                              "Adaptabilité",
+                              "Gestion du temps",
                             ]
                           ).map((skill) => (
                             <span

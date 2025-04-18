@@ -276,21 +276,20 @@ const Portfolio = () => {
                         <div className="flex flex-wrap gap-3">
                           {(category === "Compétences techniques"
                             ? [
-                              "⚛️ ▲ React NextJS",
-                              "🟦 TypeScript",
-                              "🎯 Appwrite",
-                              "🔥 Firebase",
-                              "🔷 Prisma",
-                              "🍃 MongoDB",
-                              "🟩 Node.js",
-                              "🎨 Tailwind CSS",
-                            ]
+                               "⚛️ ▲ React NextJS",
+  "🟦 TypeScript",
+  "🎯 Appwrite",
+  "🔥 Firebase",
+  "🔷 Prisma",
+  "🍃 MongoDB",
+  "🟩 Node.js",
+  "🎨 Tailwind CSS",
                             : [
                               "🛠️ Résolution de problèmes",
                               "🧠 Communication",
                               "🤝 Esprit d'équipe",
-                              "📋 Autonomie & rigueur",
-                              "🔄 Adaptabilité",
+                              "🕐 Autonomie & rigueur",
+                              "🧠 Adaptabilité",
                               "🕐 Gestion du temps",
                             ]
                           ).map((skill) => (
