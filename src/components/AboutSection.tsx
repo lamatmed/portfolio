@@ -15,6 +15,13 @@ const AboutSection = () => {
       <p className="mb-4">
         Réalisations récentes : Application mobile (React Native + Convex + Firebase) et application web (Next.js + Supabase + Prisma + jsPDF).
       </p>
+      <div className="pt-4">
+        <Button variant="outline" className="gap-2" asChild>
+          <a href="/cv.pdf" download>
+            Télécharger le CV
+          </a>
+        </Button>
+      </div>
     </section>
   );
 };
