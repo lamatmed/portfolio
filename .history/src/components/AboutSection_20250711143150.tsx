@@ -12,9 +12,6 @@ const AboutSection = () => {
       <p className="mb-4">
         Je me spécialise dans le développement full-stack avec une expertise en Python, PHP, JavaScript et les technologies web modernes. Mes compétences techniques incluent React.js, Next.js, Node.js, React Native et diverses bases de données comme MongoDB, MySQL et Prisma. Je suis également familier avec les bases de l'apprentissage automatique et les outils de visualisation de données comme Tableau.
       </p>
-      <p className="mb-4">
-        Réalisations récentes : Application mobile (React Native + Convex + Firebase) et application web (Next.js + Supabase + Prisma + jsPDF).
-      </p>
     </section>
   );
 };
