@@ -65,7 +65,7 @@ const ProjectsSection = () => {
       image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80',
       tags: ['Figma', 'UI/UX', 'Animation'],
       githubUrl: 'https://github.com/lamatmed',
-      liveUrl: 'https://portfolio-lamat.vercel.app/',
+      liveUrl: '',
       category: 'design'
     },
   ];

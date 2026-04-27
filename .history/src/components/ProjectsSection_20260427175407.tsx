@@ -31,32 +31,32 @@ const ProjectsSection = () => {
     {
       id: 2,
     title: 'RimTransport Web',
-    description: "Plateforme web de gestion de transport avec réservation. Utilisation de Convex pour les données en temps réel.",
+    description: "Plateforme web de gestion de transport avec réservation, suivi en temps réel et gestion des utilisateurs. Utilisation de Convex pour les données en temps réel.",
     image: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&q=80',
     tags: ['Next.js', 'Convex'],
     githubUrl: 'https://github.com/lamatmed/rimtransport',
-    liveUrl: 'https://rimtransport.com',
+    liveUrl: 'https://github.com/lamatmed/rimtransport',
     category: 'web'
     },
     {
-     id: 3,
-    title: 'RimTransport Mobile',
-    description: "Application mobile de transport avec , réservation rapide et notifications en temps réel. Backend temps réel avec Convex.",
-    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80',
-    tags: ['React Native', 'Convex'],
-    githubUrl: 'https://rimtransport.com',
-    liveUrl: 'https://rimtransport.com',
-    category: 'mobile'
+      id: 3,
+      title: 'SENSAI',
+      description: "Une application alimentée par l'IA, construite avec Next.js, dotée d'une interface moderne et de fonctionnalités avancées.",
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80',
+      tags: ['Next.js', 'JavaScript', 'IA'],
+      githubUrl: 'https://github.com/lamatmed/monappmauritanie',
+      liveUrl: 'https://monappmauritanie.vercel.app',
+      category: 'web'
     },
     {
-     id: 4,
-    title: 'SoftRim Mobile',
-    description: "Application mobile développée avec React Native pour la gestion de services numériques, avec synchronisation temps réel via Convex.",
-    image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80',
-    tags: ['React Native', 'Convex'],
-    githubUrl: '',
-    liveUrl: '',
-    category: 'mobile'
+      id: 5,
+      title: 'Gestionnaire de Tâches Mobile',
+      description: "Application mobile multiplateforme pour gérer ses tâches quotidiennes, notifications push et synchronisation cloud.",
+      image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&q=80',
+      tags: ['React Native', 'Expo', 'Firebase'],
+      githubUrl: 'https://github.com/lamatmed/todo-mobile-app',
+      liveUrl: '#',
+      category: 'mobile'
     },
     {
       id: 6,
@@ -64,8 +64,8 @@ const ProjectsSection = () => {
       description: "Maquette de portfolio moderne et responsive, réalisée avec Figma et animations interactives.",
       image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80',
       tags: ['Figma', 'UI/UX', 'Animation'],
-      githubUrl: 'https://github.com/lamatmed',
-      liveUrl: 'https://portfolio-lamat.vercel.app/',
+      githubUrl: 'https://www.figma.com/file/portfolio-design',
+      liveUrl: '#',
       category: 'design'
     },
   ];

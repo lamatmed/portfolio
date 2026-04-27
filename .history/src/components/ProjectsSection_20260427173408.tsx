@@ -23,8 +23,8 @@ const ProjectsSection = () => {
       title: 'EcomerceWebsite',
       description: "Application e-commerce complète avec gestion des produits, panier, paiement et interface moderne. Plateforme dynamique avec contrôle d'accès, gestion d'état globale, mises à jour en temps réel et chargement optimisé.",
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80',
-      tags: ['React', 'Next.js', 'SANITY'],
-      githubUrl: 'https://github.com/lamatmed/rimclothings',
+      tags: ['React', 'Next.js', '?qng'],
+      githubUrl: 'https://github.com/lamatmed/novacart',
       liveUrl: '#',
       category: 'web'
     },
@@ -33,7 +33,7 @@ const ProjectsSection = () => {
       title: 'Chat App',
       description: 'Une application de chat en temps réel avec une interface moderne et des fonctionnalités de communication fluides.',
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80',
-      tags: ['React', 'Node.js', 'stream-chat'],
+      tags: ['React', 'Node.js', 'Stream-Chat'],
       githubUrl: 'https://github.com/lamatmed/chat-video-mr',
       liveUrl: '#',
       category: 'web'
@@ -41,23 +41,33 @@ const ProjectsSection = () => {
     {
       id: 3,
       title: 'SENSAI',
-      description: 'Une application alimentée par l'IA, construite avec Next.js, dotée d'une interface moderne et de fonctionnalités avancées.',
+      description: "Une application alimentée par l'IA, construite avec Next.js, dotée d'une interface moderne et de fonctionnalités avancées.",
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80',
       tags: ['Next.js', 'JavaScript', 'IA'],
-      githubUrl: 'https://github.com/MANImax123/SENSAI',
-      liveUrl: 'https://sensai-five-kappa.vercel.app',
+      githubUrl: 'https://github.com/lamatmed/monappmauritanie',
+      liveUrl: 'https://monappmauritanie.vercel.app',
       category: 'web'
     },
     {
-      id: 4,
-      title: 'CodeReviewer',
-      description: 'Une plateforme de revue de code qui aide les développeurs à améliorer la qualité de leur code grâce à l'assistance de l'IA.',
-      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80',
-      tags: ['Next.js', 'TypeScript', 'IA'],
-      githubUrl: 'https://github.com/MANImax123/CodeReviewer',
+      id: 5,
+      title: 'Gestionnaire de Tâches Mobile',
+      description: "Application mobile multiplateforme pour gérer ses tâches quotidiennes, notifications push et synchronisation cloud.",
+      image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&q=80',
+      tags: ['React Native', 'Expo', 'Firebase'],
+      githubUrl: 'https://github.com/lamatmed/todo-mobile-app',
       liveUrl: '#',
-      category: 'web'
-    }
+      category: 'mobile'
+    },
+    {
+      id: 6,
+      title: 'Portfolio Design',
+      description: "Maquette de portfolio moderne et responsive, réalisée avec Figma et animations interactives.",
+      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80',
+      tags: ['Figma', 'UI/UX', 'Animation'],
+      githubUrl: 'https://www.figma.com/file/portfolio-design',
+      liveUrl: '#',
+      category: 'design'
+    },
   ];
 
   const filteredProjects = filter === 'all' 

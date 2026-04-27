@@ -49,14 +49,14 @@ const ProjectsSection = () => {
     category: 'mobile'
     },
     {
-     id: 4,
-    title: 'SoftRim Mobile',
-    description: "Application mobile développée avec React Native pour la gestion de services numériques, avec synchronisation temps réel via Convex.",
-    image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80',
-    tags: ['React Native', 'Convex'],
-    githubUrl: '',
-    liveUrl: '',
-    category: 'mobile'
+      id: 5,
+      title: 'Gestionnaire de Tâches Mobile',
+      description: "Application mobile multiplateforme pour gérer ses tâches quotidiennes, notifications push et synchronisation cloud.",
+      image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&q=80',
+      tags: ['React Native', 'Expo', 'Firebase'],
+      githubUrl: 'https://github.com/lamatmed/todo-mobile-app',
+      liveUrl: '#',
+      category: 'mobile'
     },
     {
       id: 6,
@@ -64,8 +64,8 @@ const ProjectsSection = () => {
       description: "Maquette de portfolio moderne et responsive, réalisée avec Figma et animations interactives.",
       image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80',
       tags: ['Figma', 'UI/UX', 'Animation'],
-      githubUrl: 'https://github.com/lamatmed',
-      liveUrl: 'https://portfolio-lamat.vercel.app/',
+      githubUrl: 'https://www.figma.com/file/portfolio-design',
+      liveUrl: '#',
       category: 'design'
     },
   ];

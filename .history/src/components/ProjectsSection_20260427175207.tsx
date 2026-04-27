@@ -20,12 +20,12 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'EcomerceWebsite',
+      title: '',
       description: "Application e-commerce complète avec gestion des produits, panier, paiement et interface moderne. Plateforme dynamique avec contrôle d'accès, gestion d'état globale, mises à jour en temps réel et chargement optimisé.",
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80',
-      tags: ['React', 'Next.js', 'SANITY'],
-      githubUrl: 'https://github.com/lamatmed/rimclothings',
-      liveUrl: '#',
+      tags: ['React', 'Next.js', 'MangoDB'],
+      githubUrl: 'https://github.com/lamatmed/novacart',
+      liveUrl: 'https://novacart-mr.vercel.app/',
       category: 'web'
     },
     {
